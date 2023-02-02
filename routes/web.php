@@ -19,4 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Created resource route
+Auth::resource('listings', 'ListingsController');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
