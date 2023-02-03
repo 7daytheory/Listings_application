@@ -12,9 +12,20 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
-                    @endif
+                    @endif  
 
-                    {{ __('You are logged in!') }}
+                    <h3>Your Listings</h3>
+                    @if (count($listings))
+                        <table class="table table-striped">
+                            @foreach($listings as $listing)
+                                <tr>
+                                    <td>{{ $listing->listings_name }}</td>
+                                </tr>
+                            @endforeach
+                        </table>
+                    @else
+                    <p>There are no listings yet.</p>
+                    @endif
                 </div>
             </div>
         </div>

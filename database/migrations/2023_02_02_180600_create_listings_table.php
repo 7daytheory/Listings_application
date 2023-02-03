@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
             $table->id('listings_id');
-            $table->integer('listings_user_id');
+            $table->integer('user_id');
             $table->string('listings_name');
             $table->string('listings_adress');
             $table->string('listings_website');
