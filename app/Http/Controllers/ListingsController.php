@@ -24,7 +24,8 @@ class ListingsController extends Controller
      */
     public function create()
     {
-        //
+        //Show form to create new listing
+        return view('create');
     }
 
     /**
