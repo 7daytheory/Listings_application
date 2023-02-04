@@ -19,6 +19,7 @@
                             @foreach($listings as $listing)
                                 <tr>
                                     <td>{{ $listing->listings_name }}</td>
+                                    <td><a href="/listings/{{$listing->listings_id}}/edit" class="btn btn-info float-right">Edit</a></td>
                                 </tr>
                             @endforeach
                         </table>
