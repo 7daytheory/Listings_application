@@ -4,6 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
+                <div class="card-header">{{ __('Dashboard') }} <span><a href="/home" class="float-right btn-custom">Go back</a></span></div>
                     <div class="card-header">Create New Listing</div>
                         <div class="card-body">
                             @if(session('status'))
