@@ -12,8 +12,8 @@
                                     {{ session('status')}}
                                     
                                 @endif
-                                <form method="post" action="#">
-                                    @csrf <!-- CSRF token shortcut -->
+                                <form method="POST" action="/listings">
+                                    @CSRF
                                     <div class="form-group">
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
