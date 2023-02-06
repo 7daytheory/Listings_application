@@ -127,6 +127,10 @@ class ListingsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Delete Listings
+        $listing = Listing::find($id);
+        $listing->delete();
+
+        return redirect()->to('/home')->with('success', 'Listing successfully removed!');
     }
 }
