@@ -8,9 +8,13 @@
                     @if (count($listings))
 
                         <div class="card-body">
+                            <div class="list-group">
                             @foreach($listings as $listing)
-
+                                <div class="list-group-item">
+                                    {{ $listing->listings_name }}
+                                </div>
                             @endforeach
+                            </div>
                     @else
                     <p>No listings found!</p>
                     @endif

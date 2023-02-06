@@ -16,8 +16,9 @@ class ListingsController extends Controller
      */
     public function index()
     {
+        $listings = Listing::orderBy('created_at', 'desc')->get();
         //Route index page pointed to this method - home page
-        return view('index');
+        return view('index')->with('listings', $listings);
     }
 
     /**
