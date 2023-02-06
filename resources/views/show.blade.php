@@ -15,10 +15,10 @@
                                     Address : {{ $listing->listings_address }}
                                 </div>
                                 <div class="list-group-item">
-                                    Email : {{ $listing->listings_email }}
+                                    Email : <a href="mailto:{{ $listing->listings_email }}">{{ $listing->listings_email }}</a>
                                 </div>
                                 <div class="list-group-item">
-                                    Website : {{ $listing->listings_website }}
+                                    Website : <a href="{{ $listing->listings_website }}">{{ $listing->listings_website }}</a>
                                 </div>
                                 <div class="list-group-item">
                                     Phone : {{ $listing->listings_phone }}
