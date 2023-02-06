@@ -19,14 +19,15 @@
                             @foreach($listings as $listing)
                                 <tr>
                                     <td>{{ $listing->listings_name }}</td>
-                                    <td><a href="/listings/{{$listing->listings_id}}/edit" class="btn btn-secondary float-right">Edit</a></td>
-                                    <td>
-                                        <form class="float-right ml-2 p-0" action="/listings/{{$listing->listings_id}}" method="post">
+                                    <td class="w-100px">
+                                    <form class="float-right" action="/listings/{{$listing->listings_id}}" method="post">
                                             @csrf
                                             @method('DELETE')
-                                            <button class="btn btn-danger mr-2" type="submit">Delete</button>
+                                            <button class="btn btn-danger" type="submit">Delete</button>
                                         </form>
-                                    </td>
+                                        <a href="/listings/{{$listing->listings_id}}/edit" class="btn btn-secondary float-right mr-2">Edit</a>
+                                </td>
+
                                 </tr>
                             @endforeach
                         </table>
