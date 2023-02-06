@@ -40,7 +40,7 @@
                                     <label for="bio">Listing Bio</label>
                                     <input type="text" class="form-control" id="bio" name="bio" value="{{$listing->listings_bio}}">
                                     </div>
-                                    <button type="submit" class="btn btn-primary mt-2" style="float:right">Submit</button>
+                                    <button type="submit" class="btn btn-primary mt-2" style="float:right">Edit</button>
                                 </form>
                         </div>
                     </div>
