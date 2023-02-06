@@ -11,7 +11,7 @@
                             <div class="list-group">
                             @foreach($listings as $listing)
                                 <div class="list-group-item">
-                                    {{ $listing->listings_name }}
+                                <a href="/listings/{{ $listing->listings_id }}">{{ $listing->listings_name }}</a>
                                 </div>
                             @endforeach
                             </div>

@@ -71,7 +71,10 @@ class ListingsController extends Controller
      */
     public function show($id)
     {
-        //
+        //Show Listing by ID
+        $listings = Listing::find($id);
+
+        return view('show')->with('listing', $listings);
     }
 
     /**
