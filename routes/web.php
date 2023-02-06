@@ -20,4 +20,4 @@ Auth::routes();
 //Created resource route
 Route::resource('listings', 'App\Http\Controllers\ListingsController');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/listings', [App\Http\Controllers\HomeController::class, 'index'])->name('listings');
