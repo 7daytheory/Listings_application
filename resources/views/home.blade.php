@@ -20,6 +20,13 @@
                                 <tr>
                                     <td>{{ $listing->listings_name }}</td>
                                     <td><a href="/listings/{{$listing->listings_id}}/edit" class="btn btn-info float-right">Edit</a></td>
+                                    <td>
+                                        <form class="float-right ml-2" action="/listings/{{$listing->listings_id}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-danger" type="submit">Delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>
