@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }} <span><a href="/listings/create" class="float-right btn-custom">Create Listing</a></span></div>
+                <div class="card-header">{{ __('Dashboard') }} <span><a href="/listings/create" class="float-right btn btn-secondary">Create Listing</a></span></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -19,12 +19,12 @@
                             @foreach($listings as $listing)
                                 <tr>
                                     <td>{{ $listing->listings_name }}</td>
-                                    <td><a href="/listings/{{$listing->listings_id}}/edit" class="btn btn-info float-right">Edit</a></td>
+                                    <td><a href="/listings/{{$listing->listings_id}}/edit" class="btn btn-secondary float-right">Edit</a></td>
                                     <td>
-                                        <form class="float-right ml-2" action="/listings/{{$listing->listings_id}}" method="post">
+                                        <form class="float-right ml-2 p-0" action="/listings/{{$listing->listings_id}}" method="post">
                                             @csrf
                                             @method('DELETE')
-                                            <button class="btn btn-danger" type="submit">Delete</button>
+                                            <button class="btn btn-danger mr-2" type="submit">Delete</button>
                                         </form>
                                     </td>
                                 </tr>

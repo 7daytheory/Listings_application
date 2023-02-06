@@ -16,7 +16,9 @@ class ListingsController extends Controller
      */
     public function index()
     {
-        //
+        $listings = Listing::orderBy('created_at', 'desc')->get();
+        //Route index page pointed to this method - home page
+        return view('index')->with('listings', $listings);
     }
 
     /**
@@ -69,7 +71,10 @@ class ListingsController extends Controller
      */
     public function show($id)
     {
-        //
+        //Show Listing by ID
+        $listings = Listing::find($id);
+
+        return view('show')->with('listing', $listings);
     }
 
     /**
