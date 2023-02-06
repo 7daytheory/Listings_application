@@ -16,7 +16,8 @@ class ListingsController extends Controller
      */
     public function index()
     {
-        //
+        //Route index page pointed to this method - home page
+        return view('index');
     }
 
     /**
