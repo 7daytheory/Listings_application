@@ -24,7 +24,7 @@
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                     </div>
                                     <div class="form-group">
-                                    <label for="address">Subject</label>
+                                    <label for="address">Address</label>
                                     <input type="text" class="form-control" id="address" name="address" placeholder="Enter address">
                                     </div>
                                     <div class="form-group">
